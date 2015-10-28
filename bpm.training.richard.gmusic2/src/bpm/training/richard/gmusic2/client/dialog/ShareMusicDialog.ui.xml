@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:m="urn:import:gwt.material.design.client.ui">
+	<ui:style>
+	
+	</ui:style>
+	<m:MaterialPanel>
+		<m:MaterialModalContent>
+			<m:MaterialTitle title="Share Music" description="Select Users that you want to share your music to."/>
+			 <m:MaterialAutoComplete ui:field="autocomplete" placeholder="User" />
+		</m:MaterialModalContent>
+		
+		<m:MaterialModalFooter align="right">
+			<m:MaterialButton ui:field="btnShare" waves="green" type="flat" text="Share" />
+			<m:MaterialButton ui:field="btnCancel" waves="red" type="flat" text="Cancel" />
+		</m:MaterialModalFooter>
+	</m:MaterialPanel> 
+</ui:UiBinder> 

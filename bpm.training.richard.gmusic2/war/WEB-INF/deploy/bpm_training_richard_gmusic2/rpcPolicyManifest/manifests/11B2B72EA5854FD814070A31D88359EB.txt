@@ -1,0 +1,2 @@
+serviceClass: bpm.training.richard.gmusic2.client.services.IMusicService
+path: 80155D7A01C6873AA675622239D52212.gwt.rpc

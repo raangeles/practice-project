@@ -1,0 +1,238 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:m="urn:import:gwt.material.design.client.ui">
+
+	<ui:style>
+	@external nav-wrapper, card-title, card-content;
+	body {
+		background-color: #e0e0e0;
+	}
+	
+	.logo {
+		margin-top: 57px;
+		padding-right: 10px;
+	}
+	
+	.headerPanel {
+		height: 65px;
+		padding: 5px;
+	}
+	
+	.headerPanel .title {
+		margin-top: -10px;
+	}
+	
+	.headerPanel .description {
+		opacity: 0.71;
+		margin-top: -45px;
+		padding-left: 56px;
+	}
+	
+	.mainPanel {
+		height: 200px;
+		padding-top: 20px;
+		padding-left: 65px;
+		padding-bottom: 234px;
+	}
+	
+	.nav-wrapper {
+		margin: 0px;
+		width: 100%;
+	}
+	
+	main {
+		padding-left: 300px;
+		padding-bottom: 100px;
+	}
+	
+	.btnLogOut {
+		margin-left: 10px;
+	}
+	
+	.card-top {
+		margin-top: -90px;
+		padding-left: 3%;
+	}
+	
+	.card-bottom {
+		padding-left: 40px;
+	}
+	
+	.cards {
+		margin-bottom: 0px;
+	}
+	
+	.card-title {
+		font-size: 1.5em !important;
+		line-height: 1.2 !important;
+	}
+	
+	.card-content {
+		padding-top: 0px !important;
+	}
+	
+	.cardHead {
+		padding-left: 50px;
+	}
+	
+	.footer {
+		position: fixed;
+		z-index: 2;
+	}
+	
+	.controlPanel {
+		width: 100%;
+		height: 75px;
+		background-color: #fff;
+		position: fixed;
+		z-index: 999;
+		bottom: 0;
+		border-top: 4px solid #e9e9e9;
+		margin-bottom: 0;
+		padding-top: 15px;
+	}
+	
+	.nowPlaying {
+		margin-top: -22px !important;
+		margin-left: -22px !important;
+	}
+	
+	.labelTitle {
+		margin-top: 10px;
+	}
+	</ui:style>
+	<m:MaterialPanel>
+		<m:MaterialNavBar wave="default" align="right" color="white"
+			textColor="black" text="Listen Now" sideBar="fixed" sideBarWidth="300">
+			<m:nav>
+				<m:MaterialSearch ui:field="txtSearch" textColor="orange"
+					placeholder="Search" color="blue darken-3" />
+			</m:nav>
+			<m:nav>
+				<m:MaterialButton ui:field="btnAddMusic" text="Add Music"
+					waves="light" color="orange darken-3" />
+			</m:nav>
+			<m:nav>
+				<m:MaterialIcon ui:field="btnLogOut" tooltip="Log Out"
+					icon="mdi-action-settings-power" color="grey" size="medium"
+					addStyleNames="{style.btnLogOut}" />
+			</m:nav>
+			<m:sidebaritem>
+				<m:MaterialPanel color="orange darken-3"
+					addStyleNames="{style.headerPanel}">
+					<m:MaterialLink iconPosition="left" icon="mdi-hardware-headset"
+						text="Music" textColor="white" addStyleNames="{style.title}" />
+					<m:MaterialLabel text="All Access" textColor="white"
+						addStyleNames="{style.description}" />
+				</m:MaterialPanel>
+			</m:sidebaritem>
+			<m:sidebaritem>
+				<m:MaterialLink ui:field="sideBarListenNow" text="Listen Now"
+					textColor="grey" />
+			</m:sidebaritem>
+			<m:sidebaritem>
+				<m:MaterialLink ui:field="sideBarProfile" text="Profile / My Library"
+					textColor="grey" />
+			</m:sidebaritem>
+			<m:sidebaritem>
+				<m:MaterialLink ui:field="sideBarSharedMusic" text="Shared Music" textColor="grey" />
+			</m:sidebaritem>
+			<m:sidebaritem>
+				<m:MaterialLink ui:field="sidebarExplore" text="Explore" textColor="grey"
+					separator="true" />
+			</m:sidebaritem>
+
+			<m:sidebaritem>
+				<m:MaterialLink text="Queue" textColor="black"
+					fontSize="0.6" />
+			</m:sidebaritem>
+			<m:sidebaritem>
+				<m:MaterialLink text="Thumbs Up" textColor="black" />
+			</m:sidebaritem>
+			<m:sidebaritem>
+				<m:MaterialLink text="Last Added" textColor="black" />
+			</m:sidebaritem>
+			<m:sidebaritem>
+				<m:MaterialLink text="Free and purchased" textColor="black" />
+			</m:sidebaritem>
+			<m:sidebaritem>
+				<m:MaterialLink text="Shared with me" textColor="black" />
+			</m:sidebaritem>
+			<m:sidebaritem>
+				<m:MaterialLink text="Sound Search" textColor="black" />
+			</m:sidebaritem>
+		</m:MaterialNavBar>
+		
+<!-- Main Container -->
+
+		<m:MaterialContainer ui:field="mainCon">
+
+			<m:MaterialPanel ui:field="homeContent" color="orange darken-3"
+				addStyleNames="{style.mainPanel}">
+				<m:MaterialRow>
+					<m:MaterialColumn>
+						<m:MaterialTitle ui:field="lblUser" title="It's Monday morning"
+							description="Play music for..." color="white" />
+					</m:MaterialColumn>
+					<m:MaterialColumn addStyleNames="right">
+						<m:MaterialDropDown ui:field="btnSortBy" text="Sort By"
+							waves="light" divider="true" color="grey lighten-1">
+							<m:item>
+								<m:MaterialLink ui:field="btnSortByTitle" text="Title"
+									iconPosition="right" icon="mdi-av-my-library-music" textColor="grey" />
+							</m:item>
+							<m:item>
+								<m:MaterialLink ui:field="btnSortByArtist" text="Artist"
+									iconPosition="right" icon="mdi-av-recent-actors" textColor="grey" />
+							</m:item>
+							<m:item>
+								<m:MaterialLink ui:field="btnSortByDescription"
+									text="Description" iconPosition="right" icon="mdi-av-my-library-books"
+									textColor="grey" />
+							</m:item>
+						</m:MaterialDropDown>
+					</m:MaterialColumn>
+				</m:MaterialRow>
+			</m:MaterialPanel>
+
+			<m:MaterialPanel ui:field="sharedPanel">
+				<m:MaterialRow ui:field="rowMusic" addStyleNames="{style.card-top}" />
+				<m:MaterialTitle title="Shared Music"
+					description="Music shared by others" color="black" addStyleNames="{style.cardHead}" />
+				<m:MaterialRow ui:field="rowShared" addStyleNames="{style.card-bottom}">
+				</m:MaterialRow>
+			</m:MaterialPanel>
+
+		</m:MaterialContainer>
+
+<!-- Control Panel -->
+		<m:MaterialRow addStyleNames="{style.controlPanel} controlPanel">
+			<m:MaterialColumn grid="s4 l4" addStyleNames="left-align {style.nowPlaying}">
+				<m:MaterialImage ui:field="imgMusic" url="http://chrome-apps-doc2.appspot.com/trunk/extensions/examples/api/idle/idle_simple/sample-128.png"
+					grid="l6" height="auto" width="100px" />
+				<m:MaterialColumn grid="l6" addStyleNames="{style.labelTitle}">
+					<m:MaterialLabel ui:field="txtTitle" text="Title" fontSize="2" />
+					<m:MaterialLabel ui:field="txtArtist" text="Artist" fontSize="1" />
+				</m:MaterialColumn>
+			</m:MaterialColumn>
+
+			<m:MaterialColumn grid="s8 l4" addStyleNames="center-align">
+				<m:MaterialIcon icon="mdi-av-repeat" grid="l2" />
+				<m:MaterialIcon icon="mdi-av-skip-previous" grid="l2" />
+				<m:MaterialIcon ui:field="btnPlay" icon="mdi-av-play-arrow" grid="l2" />
+				<m:MaterialIcon icon="mdi-av-skip-next" grid="l2" />
+				<m:MaterialIcon icon="mdi-av-shuffle" grid="l2" />
+			</m:MaterialColumn>
+
+			<m:MaterialColumn grid="l4"
+				addStyleNames="hide-on-small-only right-align">
+				<m:MaterialIcon icon="mdi-av-volume-up" grid="l2" />
+				<m:MaterialIcon icon="mdi-action-thumb-up" grid="l2" />
+				<m:MaterialIcon icon="mdi-action-thumb-down" grid="l2" />
+				<m:MaterialIcon icon="mdi-av-playlist-add" grid="l2" />
+				<m:MaterialIcon icon="mdi-communication-call-made" grid="l2" />
+			</m:MaterialColumn>
+
+		</m:MaterialRow>
+	</m:MaterialPanel>
+</ui:UiBinder> 

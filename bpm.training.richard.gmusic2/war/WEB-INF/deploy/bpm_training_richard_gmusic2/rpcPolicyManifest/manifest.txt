@@ -1,0 +1,2 @@
+# Module bpm_training_richard_gmusic2
+# RPC service class, partial path of RPC policy file

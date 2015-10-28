@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 09 16, 15 11:17:48 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping default-access="field">
+ <class name="bpm.training.richard.gmusic2.shared.Music" table="MusicTable">
+  <id name="id" >
+   <column name="music_id"/>
+   <generator class="native"/>
+  </id>
+  <property generated="never" lazy="false" name="title">
+   <column name="music_title"/>
+  </property>
+  <property generated="never" lazy="false" name="description">
+   <column name="music_description"/>
+  </property>
+  <property generated="never" lazy="false" name="artist">
+   <column name="music_artist"/>
+  </property>
+  <property generated="never" lazy="false" name="picture">
+   <column name="music_picture"/>
+  </property>
+  <property generated="never" lazy="false" name="userId">
+   <column name="music_user_id"/>
+  </property>
+ </class>
+</hibernate-mapping>

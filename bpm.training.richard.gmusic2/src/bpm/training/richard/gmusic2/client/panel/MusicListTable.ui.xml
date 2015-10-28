@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:m="urn:import:gwt.material.design.client.ui">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+		<m:MaterialLabel ui:field="lblTotal"></m:MaterialLabel>
+		<g:SimplePanel ui:field="gridPanel"/>
+  		<g:SimplePanel ui:field="pagerPanel"/>
+	</g:HTMLPanel>
+</ui:UiBinder> 

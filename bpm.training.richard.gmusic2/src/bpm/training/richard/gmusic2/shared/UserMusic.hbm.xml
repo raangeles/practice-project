@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 09 21, 15 2:13:55 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping default-access="field">
+    <class name="bpm.training.richard.gmusic2.shared.UserMusic" table="userMusicTable">
+        <id name="id" type="long">
+            <column name="user_music_id" />
+            <generator class="native" />
+        </id>
+        <property name="userId">
+            <column name="user_id" />
+        </property>
+        <property name="musicId">
+            <column name="music_id" />
+        </property>
+    </class>
+</hibernate-mapping>

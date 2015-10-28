@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+ <!-- SERVLETS HERE -->
+  <!-- MUSIC -->
+   <servlet>
+    <servlet-name>musicServlet</servlet-name>
+    <servlet-class>bpm.training.richard.gmusic2.server.MusicServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>musicServlet</servlet-name>
+    <url-pattern>/bpm_training_richard_gmusic2/music</url-pattern>
+  </servlet-mapping>
+  
+  <!-- USER  -->
+  <servlet>
+   <servlet-name>userServlet</servlet-name>
+    <servlet-class>bpm.training.richard.gmusic2.server.UserServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>userServlet</servlet-name>
+    <url-pattern>/bpm_training_richard_gmusic2/user</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>Bpm_training_richard_gmusic2.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>
